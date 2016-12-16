@@ -1,10 +1,10 @@
-import * as actions from '../actions/cheese';
+import * as actions from '../actions/cheese.js';
 
 const intital = {
   cheeses: [],
   loading: false,
   error: null
-}
+};
 
 export const cheeseReducer = function(state = intital, action) {
 
@@ -23,4 +23,5 @@ export const cheeseReducer = function(state = intital, action) {
       loading: false,
       error: action.error}
   }
-}
+  return state;
+};
