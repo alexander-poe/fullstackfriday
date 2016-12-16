@@ -1,21 +1,26 @@
 import React from 'react';
+// import {connect} from 'react-redux';
 
-import {connect} from 'react-redux';
 
-const CheeseList = props => {
-
-    return(
-      <div className="cheeseListArray">
-        <ul>
-          <li>{props.cheeses}</li>
-        </ul>
-      </div>
-    )
+export  default class CheeseList extends React.Component {
+    constructor(props) {
+    super(props);
   }
 
-console.log(props.cheeses)
-const mapStateToProps = (state) => ({
-  cheeses: state
-});
+    render(props) {
 
-export default connect(mapStateToProps)(CheeseList);
+      return(
+
+          <ul>
+            {this.props.cheeses}
+          </ul>
+
+      );
+    }
+}
+
+// const mapStateToProps = (state, props) => ({
+//   cheeses: state.cheeses
+// });
+//
+// export default connect(mapStateToProps)(CheeseList);
